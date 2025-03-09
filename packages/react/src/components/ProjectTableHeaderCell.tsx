@@ -1,5 +1,5 @@
 import { Property } from "@v7-product-interview-task/api";
-import styles from "@v7-product-interview-task/styles/ProjectTableHeaderCell.module.css"
+import styles from "@v7-product-interview-task/styles/ProjectTableHeaderCell.module.css";
 
 export const ProjectTableHeaderCell = ({
   property,
@@ -10,14 +10,14 @@ export const ProjectTableHeaderCell = ({
 }) => {
   return (
     <th
-      className={styles['headerCell']}
+      className={styles["headerCell"]}
       role="gridcell"
       aria-rowindex={1}
       aria-colindex={columnIndex + 1}
       tabIndex={0}
     >
-      {property.name}
-      <span className={styles['propertyType']}>({property.type})</span>
+      {property.name}&nbsp;
+      <span className={styles["propertyType"]}>({property.type})</span>
     </th>
   );
 };

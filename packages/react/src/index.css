@@ -13,6 +13,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -49,9 +55,12 @@ button {
 button:hover {
   border-color: #646cff;
 }
-button:focus,
+button:focus {
+  outline: 2px solid transparent;
+  outline-offset: \0px;
+}
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 2px solid -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
