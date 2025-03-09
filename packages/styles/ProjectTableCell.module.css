@@ -3,8 +3,6 @@
   min-width: 300px;
   max-width: 500px;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 .emptyCell {

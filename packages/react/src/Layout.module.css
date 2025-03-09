@@ -1,8 +1,0 @@
-.main {
-  border-top-left-radius: 8px;
-  background: var(--color-surface-default);
-  flex: 1;
-  margin: 0 0 0 8px;
-  padding-top: 10px;
-  width: 100%;
-}

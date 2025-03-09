@@ -1,25 +1,22 @@
-import { Link, useParams } from "react-router-dom";
-import { ProjectTableCell } from "./ProjectTableCell";
-import { ProjectTableHeaderCell } from "./ProjectTableHeaderCell";
-import { useProjectContext } from "@/contexts/Project/useProjectContext";
-import styles from "@v7-product-interview-task/styles/ProjectTable.module.css";
-import AddPropertyButton from "./AddPropertyButton";
+import { Link, useParams } from 'react-router-dom';
+import {ProjectTableCell} from './ProjectTableCell';
+import {ProjectTableHeaderCell} from './ProjectTableHeaderCell';
+import { useProjectContext } from '@/contexts/Project/useProjectContext';
+import styles from '@v7-product-interview-task/styles/ProjectTable.module.css'
+
 
 export const ProjectTable = () => {
-  const { workspaceId, projectId } = useParams() as {
-    workspaceId: string;
-    projectId: string;
-  };
-  const { entities, project } = useProjectContext();
+  const {workspaceId, projectId} = useParams() as { workspaceId: string; projectId: string };
+  const {entities, project} = useProjectContext()
 
   return (
     <div className={styles.container}>
       {project && (
-        <table
+        <table 
           className={styles.grid}
           role="grid"
-          style={{
-            gridTemplateColumns: `repeat(${project.properties.length}, 1fr)`,
+          style={{ 
+            gridTemplateColumns: `repeat(${project.properties.length}, 1fr)` 
           }}
         >
           <thead>
@@ -32,10 +29,6 @@ export const ProjectTable = () => {
                   columnIndex={index}
                 />
               ))}
-              <th className={styles.add}>
-                <AddPropertyButton />
-              </th>
-              <th />
             </tr>
           </thead>
           <tbody>
@@ -56,7 +49,6 @@ export const ProjectTable = () => {
                     propertyIndex={propertyIndex}
                   />
                 ))}
-                <td colSpan={2} />
               </tr>
             ))}
           </tbody>
